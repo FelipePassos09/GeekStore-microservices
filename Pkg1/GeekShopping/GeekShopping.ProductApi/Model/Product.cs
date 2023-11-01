@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GeekShopping.ProductApi.Model;
 
-[Table("prodcts")]
+[Table("products")]
 
 public class Product : BaseEntity
 {
