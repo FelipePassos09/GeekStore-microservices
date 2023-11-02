@@ -16,6 +16,7 @@ public class Product : BaseEntity
     [Column("price")]
     [Required]
     [Range(1,10000)]
+    [DataType("decimal(10,2)")]
     public decimal Price { get; set; }
 
     [Column("description")]
