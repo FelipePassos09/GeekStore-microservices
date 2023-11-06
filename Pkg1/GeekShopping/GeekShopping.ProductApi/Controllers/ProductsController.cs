@@ -39,7 +39,7 @@ namespace GeekShopping.ProductApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ProductVO>> CreateProduct(ProductVO vo)
+        public async Task<ActionResult<ProductVO>> CreateProduct([FromBody] ProductVO vo)
         {
             if(vo == null) { return BadRequest(); }
             var product = await _repository.Create(vo);
@@ -47,7 +47,7 @@ namespace GeekShopping.ProductApi.Controllers
         }
 
         [HttpPut("{id:long}")]
-        public async Task<ActionResult<ProductVO>> UpdateProduct(ProductVO product, long id)
+        public async Task<ActionResult<ProductVO>> UpdateProduct([FromBody] ProductVO product, long id)
         {
             if (product == null || id != product.Id) return BadRequest();
             
