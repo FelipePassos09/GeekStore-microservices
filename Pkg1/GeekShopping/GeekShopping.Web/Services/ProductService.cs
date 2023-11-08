@@ -25,10 +25,10 @@ namespace GeekShopping.Web.Services
             }
         }
 
-        public async Task<ProductModel> DeleteProductById(long id)
+        public async Task<bool> DeleteProductById(long id)
         {
             var response = await _client.DeleteAsync($"{BasePath}/{id}");
-            return await response.ReadContentAs<ProductModel>();
+            return await response.ReadContentAs<bool>();
         }
 
         public async Task<IEnumerable<ProductModel>> FindAllProducts()

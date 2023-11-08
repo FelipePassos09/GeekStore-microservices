@@ -8,6 +8,6 @@ public interface IProductService
     Task<ProductModel> FindProductById(long id);
     Task<ProductModel> CreateProduct(ProductModel model);
     Task<ProductModel> UpdateProduct(ProductModel model);
-    Task<ProductModel> DeleteProductById(long id);
+    Task<bool> DeleteProductById(long id);
 
 }

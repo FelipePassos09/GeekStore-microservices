@@ -7,6 +7,7 @@ namespace GeekShopping.Web.Utils
     public static class HttpClientExtensions
     {
         private static MediaTypeHeaderValue contentType = new MediaTypeHeaderValue("application/json");
+
         public static async Task<T> ReadContentAs<T>(this HttpResponseMessage responseMessage)
         {
             if (!responseMessage.IsSuccessStatusCode) 
