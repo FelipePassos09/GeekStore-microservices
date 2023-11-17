@@ -40,7 +40,7 @@ public static class IdentityConfiguration
                 ClientId = "geek_shopping",
                 ClientSecrets = { new Secret("my_secret".Sha256()) },
                 AllowedGrantTypes = GrantTypes.Code,
-                RedirectUris = {"https://localhost:4435/signin-oidc"},
+                RedirectUris = {"https://localhost:4435/signin-oidc;https://localhost:4430/signin-oidc"},
                 PostLogoutRedirectUris = {"https://localhost:4435/signout-callback-oidc"},
                 AllowedScopes = new List<string>{
                     IdentityServerConstants.StandardScopes.OpenId,
